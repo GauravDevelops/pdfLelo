@@ -1,0 +1,238 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #050505;
+  color: #333;
+  line-height: 1.6;
+  padding: 100px 20px 20px; /* space for fixed header */
+}
+
+/* Main container */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: #efecec;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d209f1;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+li {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #060606;
+}
+
+ul {
+  margin: 8px 0 8px 20px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 500;
+}
+
+a:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 8%;
+  background: #252525;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #d209f1;
+}
+
+/* Info sections (Donate, Contact) */
+.info-section {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donate-btn {
+  background: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.donate-btn:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* QR Modal */
+.qr-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.qr-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  width: 300px;
+}
+
+.qr-content img {
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------------- Responsive Design ---------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .container {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .header {
+    padding: 15px 5%;
+  }
+
+  .navbar a {
+    margin-left: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  body {
+    padding: 80px 10px 20px; /* smaller padding */
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin: 10px 0 0 0;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .qr-content {
+    width: 90%;
+  }
+
+  .qr-content img {
+    max-width: 150px;
+  }
+}
